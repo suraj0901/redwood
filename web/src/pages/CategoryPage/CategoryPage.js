@@ -7,10 +7,7 @@ const CategoryPage = ({ category }) => {
   return (
     <>
       <MetaTags title="Category" description="Category page" />
-      <div className='w-full min-h-screen bg-gray-50 grid grid-cols-2 grid-rows-3'>
-        <CategoriesCell className  category={category}  />
-        <CategoriesCell category={category}  />
-        <CategoriesCell category={category}  />
+      <div className='w-full min-h-screen bg-gray-50'>
         <CategoriesCell category={category}  />
       </div>
     </>
