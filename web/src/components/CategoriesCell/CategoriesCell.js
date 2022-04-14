@@ -1,3 +1,5 @@
+import NewsCard from "../NewsCard/NewsCard"
+
 export const QUERY = gql`
   query CategoryWiseNews($category: String!) {
     categories: categoriesWiseNews(category: $category){
@@ -21,7 +23,7 @@ export const Success = ({ categories }) => {
   return (
     <ul>
       {categories.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
+        return <NewsCard key={item.id} data={item} />
       })}
     </ul>
   )
