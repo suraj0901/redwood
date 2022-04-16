@@ -11,3 +11,44 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+#img {
+  height: 45vh;
+}
+
+#container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+#main {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+#main::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
